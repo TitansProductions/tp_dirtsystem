@@ -22,7 +22,7 @@
 
 `exports.tp_dirtsystem:ClearPlayerDirtLevel()`
 
-**Update dirt level (save in server) : **
+**Update dirt level (save in server):**
 
 `exports.tp_dirtsystem:UpdatePlayerDirtLevel()`
 
