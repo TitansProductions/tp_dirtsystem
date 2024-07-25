@@ -2,25 +2,36 @@
 
 > `EXPORTS`
 
-**Get Dirt Level:**
+**Get dirt level data value:**
 
 `exports.tp_dirtsystem:GetDirtLevel()`
 
-**Update Dirt Level Based on the type (increasing / decreasing). Types are located in the configuration file.**
+**Get dirt level (Percentage):**
 
-`exports.tp_dirtsystem:UpdateDirtLevelBasedOnType(type)`
+`exports.tp_dirtsystem:GetFixedDirtLevel()`
 
-Those exports must be called in your river, bath or any script that you want to increase or decrease dirt progress.
+**Add dirt level:**
+
+`exports.tp_dirtsystem:AddPlayerDirtLevel(value)`
+
+**Set dirt level:**
+
+`exports.tp_dirtsystem:SetPlayerDirtLevel(value)`
+
+**Clear (reset) player dirt level to clean:**
+
+`exports.tp_dirtsystem:ClearPlayerDirtLevel()`
+
+**Update dirt level (save in server) : **
+
+`exports.tp_dirtsystem:UpdatePlayerDirtLevel()`
+
+
+**Check if the player dirt level data have been loaded: **
+
+`exports.tp_dirtsystem:IsPlayerLoaded()`
 
 > `EVENTS`
-
-**Get Current Dirt Level:**
-
-```lua
-AddEventHandler("tp_dirtsystem:getCurrentDirtLevel", function(dirtLevel)
-    -- your action
-end)
-```
 
 To update the temperature, `"tp_dirtsystem:GetTemperature"` (Client Event) must be called with `temperature value` as the first and only required parameter, for example: 
 
@@ -29,5 +40,5 @@ This event must be called when using another temperature script and not our own 
 **Update temperature from another script:**
 
 ```lua
-TriggerEvent("tp_dirtsystem:GetTemperature", temp)
+TriggerEvent("tp_dirtsystem:GetTemperature", temp) -- Client Side
 ```
