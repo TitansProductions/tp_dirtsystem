@@ -27,7 +27,7 @@
 `exports.tp_dirtsystem:UpdatePlayerDirtLevel()`
 
 
-**Check if the player dirt level data have been loaded: **
+**Check if the player dirt level data have been loaded:**
 
 `exports.tp_dirtsystem:IsPlayerLoaded()`
 
